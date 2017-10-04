@@ -63,6 +63,9 @@
     "sanitize.css": "^5.0.0",
     "webpack-combine-loaders": "^2.0.3"
   },
+  "optionalDependencies": {
+    "fsevents": "*"
+  },
   "devDependencies": {
     "babel-cli": "^6.24.1",
     "babel-eslint": "^8.0.1",
