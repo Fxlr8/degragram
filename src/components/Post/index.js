@@ -15,6 +15,7 @@ export default class Post extends PureComponent {
 		this.state = {
 			liked: false,
 			likes: getRandomInt(110, 5400),
+			image: 'http://lorempixel.com/400/400/',
 			...this.hydrate()
 		}
 	}
@@ -76,15 +77,23 @@ export default class Post extends PureComponent {
 			liked,
 			nickname,
 			likes,
-			comment
+			comment,
+			image
 		} = this.state
 		return (
 			<div>
+				<div className={styles.link}>
+					<RIEInput
+						value={image}
+						change={this.updateNickname}
+						propName='image'
+					/>
+				</div>
 				<div className={styles.post} ref={(e) => { this.node = e }}>
 					<header className={styles.header}>
 						<div className={styles.avatar}>
 							<div className={styles.image__wrapper}>
-								<img className={styles.image} src="https://scontent-arn2-1.cdninstagram.com/t51.2885-19/s150x150/14719826_327520444289362_5467047743476203520_a.jpg" alt='' />
+								<img className={styles.image} src={image} alt='' />
 							</div>
 						</div>
 						<div className={styles.text__wrap}>
@@ -95,7 +104,7 @@ export default class Post extends PureComponent {
 						</span>
 					</header>
 					<div>
-						<img className={styles.photo} src="http://loremflickr.com/cache/images/ffefdddf9c367bc9bdf3fee1a40122ca.65.jpg"/>
+						<img className={styles.photo} src={image}/>
 					</div>
 					<div className={styles.post__info}>
 						<section className={styles.icons}>

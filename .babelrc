@@ -23,11 +23,6 @@
 				"transform-react-constant-elements",
 				"transform-react-inline-elements"
 			]
-		},
-		"development": {
-			"plugins": [
-				"react-hot-loader/babel"
-			]
 		}
 	}
 }
