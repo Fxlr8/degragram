@@ -14,6 +14,7 @@ export default class Post extends PureComponent {
 		super(props)
 		this.state = {
 			liked: false,
+			blurred: true,
 			likes: getRandomInt(110, 5400),
 			image: 'http://lorempixel.com/400/400/',
 			...this.hydrate()
@@ -57,6 +58,11 @@ export default class Post extends PureComponent {
 			liked: !this.state.liked
 		})
 	}
+	toggleBlur = () => {
+		this.setState({
+			blurred: !this.state.blurred
+		})
+	}
 	updateNickname = (diff) => {
 		this.setState({
 			...diff
@@ -78,6 +84,7 @@ export default class Post extends PureComponent {
 			nickname,
 			likes,
 			comment,
+			blurred,
 			image
 		} = this.state
 		return (
@@ -93,18 +100,18 @@ export default class Post extends PureComponent {
 					<header className={styles.header}>
 						<div className={styles.avatar}>
 							<div className={styles.image__wrapper}>
-								<img className={styles.image} src={image} alt='' />
+								<img className={cx(styles.image, { img_blurred: blurred })} src={image} alt='' />
 							</div>
 						</div>
 						<div className={styles.text__wrap}>
-							<span className={styles.text_bold}>{nickname}</span>
+							<span className={cx(styles.text_bold, { blurred })}>{nickname}</span>
 						</div>
 						<span className={cx(styles.icon, styles.icon_last)}>
 							<span className={styles.icon_dots}></span>
 						</span>
 					</header>
 					<div>
-						<img className={styles.photo} src={image}/>
+						<img onClick={this.toggleBlur} className={styles.photo} src={image}/>
 					</div>
 					<div className={styles.post__info}>
 						<section className={styles.icons}>
@@ -130,7 +137,7 @@ export default class Post extends PureComponent {
 							</span>
 						</div>
 						<div className={styles.info__line}>
-							<span className={styles.text_bold}>
+							<span className={cx(styles.text_bold, { blurred })}>
 								<RIEInput
 									value={nickname}
 									change={this.updateNickname}
