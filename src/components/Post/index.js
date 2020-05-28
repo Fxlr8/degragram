@@ -31,10 +31,6 @@ export default class Post extends PureComponent {
 				comment: 'иди нахуй я сплю'
 			},
 			{
-				nickname: 'sejriz',
-				comment: 'пфф, это даже не алькантара'
-			},
-			{
 				nickname: 'klonaps',
 				comment: 'Типо весь такой занятой'
 			},
@@ -44,11 +40,11 @@ export default class Post extends PureComponent {
 			},
 			{
 				nickname: 'fxlr8',
-				comment: 'я тут закусок на всех взял, пригоняйте'
+				comment: 'Антоха, не грусти'
 			},
 			{
 				nickname: 'antonofficialprogamer',
-				comment: 'че покайфу то и делаю'
+				comment: 'че по кайфу то и делаю'
 			}
 		]
 		return keks[Math.floor(Math.random() * keks.length)]
@@ -111,7 +107,7 @@ export default class Post extends PureComponent {
 						</span>
 					</header>
 					<div>
-						<img onClick={this.toggleBlur} className={styles.photo} src={image}/>
+						<img onClick={this.toggleBlur} className={styles.photo} src={image} />
 					</div>
 					<div className={styles.post__info}>
 						<section className={styles.icons}>
@@ -120,6 +116,9 @@ export default class Post extends PureComponent {
 							</span>
 							<span className={styles.icon}>
 								<span className={styles.icon_msg}></span>
+							</span>
+							<span className={styles.icon}>
+								<svg fill="#262626" height="24" viewBox="0 0 48 48" width="24"><path d="M47.8 3.8c-.3-.5-.8-.8-1.3-.8h-45C.9 3.1.3 3.5.1 4S0 5.2.4 5.7l15.9 15.6 5.5 22.6c.1.6.6 1 1.2 1.1h.2c.5 0 1-.3 1.3-.7l23.2-39c.4-.4.4-1 .1-1.5zM5.2 6.1h35.5L18 18.7 5.2 6.1zm18.7 33.6l-4.4-18.4L42.4 8.6 23.9 39.7z"></path></svg>
 							</span>
 							<span className={cx(styles.icon, styles.icon_last)}>
 								<span className={styles.icon_fav}></span>
