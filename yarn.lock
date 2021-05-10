@@ -3236,6 +3236,10 @@ fs.realpath@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/fs.realpath/-/fs.realpath-1.0.0.tgz#1504ad2523158caa40db4a2787cb01411994ea4f"
 
+fsevents@*:
+  version "2.3.2"
+  resolved "https://registry.yarnpkg.com/fsevents/-/fsevents-2.3.2.tgz#8a526f78b8fdf4623b709e0b975c52c24c02fd1a"
+
 fsevents@^1.0.0, fsevents@^1.1.1:
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/fsevents/-/fsevents-1.1.2.tgz#3282b713fb3ad80ede0e9fcf4611b5aa6fc033f4"
@@ -3592,8 +3596,8 @@ home-or-tmp@^2.0.0:
     os-tmpdir "^1.0.1"
 
 hosted-git-info@^2.1.4:
-  version "2.5.0"
-  resolved "https://registry.yarnpkg.com/hosted-git-info/-/hosted-git-info-2.5.0.tgz#6d60e34b3abbc8313062c3b798ef8d901a07af3c"
+  version "2.8.9"
+  resolved "https://registry.yarnpkg.com/hosted-git-info/-/hosted-git-info-2.8.9.tgz#dffc0bf9a21c02209090f2aa69429e1414daf3f9"
 
 hpack.js@^2.1.6:
   version "2.1.6"
@@ -3755,9 +3759,10 @@ image-to-blob@^0.2.0:
   dependencies:
     image-to-data-uri jcblw/image-to-data-uri.js
 
-"image-to-data-uri@git+https://github.com/jcblw/image-to-data-uri.js":
+image-to-data-uri@jcblw/image-to-data-uri.js:
   version "0.0.1"
-  resolved "git+https://github.com/jcblw/image-to-data-uri.js#bcd2218a4fe1531080fd2fdb81e96b0c7d8909a6"
+  uid bcd2218a4fe1531080fd2fdb81e96b0c7d8909a6
+  resolved "https://codeload.github.com/jcblw/image-to-data-uri.js/tar.gz/bcd2218a4fe1531080fd2fdb81e96b0c7d8909a6"
 
 imurmurhash@^0.1.4:
   version "0.1.4"
